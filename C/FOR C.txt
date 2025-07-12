@@ -1,0 +1,40 @@
+วิธีใช้ cygwin ใน terminal vscode
+- เสิร์ช path ใน search window ขึ้น Edit the system environment variables คลิ๊กเข้าไป
+- ใน Tab Advanced คลิ๊ก Envionment Variables...
+- ใน System variables เลื่อนหา Path ดับเบิ้ลคลิ๊ก
+- กด New คัดลอก C:\cygwin64\bin วาง กด ok ออก
+
+----------------------------------------
+
+วิธีใช้ function ในการใช้ Template main
+- กด Ctrl + Shift + P พิมพ์ Snippets ขึ้น Snippets: Configure Snippets กดเข้าไป
+- เลือก c หรือพิมพ์ c.json แล้วคลิ๊ก
+- แล้วแก้ในไฟล์เป็น
+  {
+    "c main": {
+      "prefix": "cm",
+      "body": [
+        "#include <stdio.h>",
+        "",
+        "int main() {",
+        "    $0",
+        "    return 0;",
+        "}"
+      ]
+    },
+    "printf": {
+      "prefix": "pf",
+      "body": [
+        "printf(\"%%$0\", )"
+      ]
+    }
+  }
+- ctrl + s เพื่อบันทึก แล้วไปหน้าไฟล์ภาษา c ที่จะพิมพ์ แล้วพิมพ์ cm(ตาม prefix) แล้วกด Tab
+- c main คือชื่อ function ที่เราตั้ง
+- prefix จะเป็นอะไรก็ได้ แล้วแต่เรา เอาไว้พิมพ์เพื่อใช้คำสั่ง
+- body อยากใส่โค้ดอะไรบรรทัดไหนก็ได้
+- description จะมีหรือไม่มีก็ได้
+- $0 คือ cursor หลังจากใช้คำสั่งจะไปอยู่ตรงนั้น
+- เราจะเพิ่มกี่ template ก็ได้โดยเพิ่มตั้งแต่ function ใหญ่และอย่าลืมใส่ , ก่อนเริ่มอันใหม่
+- % ใส่ตรงๆไม่ได้ ต้องใช้ \" และใช้ \" เพื่อ escape โดยโค้ดที่ออกมาจะเป็นแค่ " เหมือนเดิม
+
