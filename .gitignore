@@ -1,0 +1,12 @@
+# Ignore executable files
+*.exe
+
+# Object files
+*.o
+
+# Editor/IDE temp files
+*.log
+*.tmp
+
+# VS Code
+.vscode/
