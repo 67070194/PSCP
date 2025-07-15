@@ -1,0 +1,132 @@
+{
+  "c main": {
+    "prefix": "cm",
+    "body": [
+      "#include <stdio.h>",
+      "",
+      "int main() {",
+      "    $0",
+      "    return 0;",
+      "}"
+    ]
+  },
+  "printf": {
+    "prefix": "pf",
+    "body": [
+      "printf(\"%$1\", $2);$0"
+    ]
+  },
+  "scanf": {
+    "prefix": "sf",
+    "body": [
+      "scanf(\"%$1\", $2);$0"
+    ]
+  },
+  "for": {
+    "prefix": "fr",
+    "body": [
+      "for ($1;$2;$3) {",
+      "    $0",
+      "}"
+    ]
+  },
+  "while": {
+    "prefix": "wh",
+    "body": [
+      "while ($1) {",
+      "    $0",
+      "}"
+    ]
+  },
+  "do while": {
+    "prefix": "dw",
+    "body": [
+      "do {",
+      "    $0",
+      "} while ($1);"
+    ]
+  },
+  "if": {
+    "prefix": "if",
+    "body": [
+      "if ($1) {",
+      "    $0",
+      "}"
+    ]
+  },
+  "else if": {
+    "prefix": "ei",
+    "body": [
+      "else if ($0) {",
+      "    ",
+      "}"
+    ]
+  },
+  "else": {
+    "prefix": "el",
+    "body": [
+      "else {",
+      "    $0",
+      "}"
+    ]
+  },
+  "switch": {
+    "prefix": "sw",
+    "body": [
+      "switch ($1) {",
+      "    case $2:",
+      "        $0",
+      "        break;",
+      "    default:",
+      "        break;",
+      "}"
+    ]
+  },
+  "array": {
+    "prefix": "ar",
+    "body": [
+      "$1 $2[$3];$0"
+    ]
+  },
+  "char": {
+    "prefix": "c",
+    "body": [
+      "char $1[$2];$0"
+    ]
+  },
+  "int": {
+    "prefix": "i",
+    "body": [
+      "int $1;$0"
+    ]
+  }
+  ,
+  "float": {
+    "prefix": "f",
+    "body": [
+      "float $1;$0"
+    ]
+  },
+  "return": {
+    "prefix": "rt",
+    "body": [
+      "return $1;$0"
+    ]
+  },
+  "struct": {
+    "prefix": "st",
+    "body": [
+      "struct $1 {",
+      "    $2",
+      "};$0"
+    ]
+  },
+  "function": {
+    "prefix": "fn",
+    "body": [
+      "$1 $2($3) {",
+      "    $0",
+      "}"
+    ]
+  }
+  }
