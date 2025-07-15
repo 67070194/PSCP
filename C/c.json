@@ -6,6 +6,7 @@
       "",
       "int main() {",
       "    $0",
+      "",
       "    return 0;",
       "}"
     ]
@@ -13,13 +14,67 @@
   "printf": {
     "prefix": "pf",
     "body": [
-      "printf(\"%$1\", $2);$0"
+      "printf(\"$1%$2\\n\", $3);$0"
+    ]
+  },
+  "printf cahr": {
+    "prefix": "pfc",
+    "body": [
+      "printf(\"$1%c\\n\", $2);$0"
+    ]
+  },
+  "printf str": {
+    "prefix": "pfs",
+    "body": [
+      "printf(\"$1%s\\n\", $2);$0"
+    ]
+  },
+  "printf int": {
+    "prefix": "pfd",
+    "body": [
+      "printf(\"$1%d\\n\", $2);$0"
+    ]
+  },
+  "printf float": {
+    "prefix": "pff",
+    "body": [
+      "printf(\"$1%f\\n\", $2);$0"
     ]
   },
   "scanf": {
     "prefix": "sf",
     "body": [
       "scanf(\"%$1\", $2);$0"
+    ]
+  },
+  "scanf char": {
+    "prefix": "sfc",
+    "body": [
+      "scanf(\" %c\", &$1);$0"
+    ]
+  },
+  "scanf line": {
+    "prefix": "sfl",
+    "body": [
+      "scanf(\" %[^\n]\", $1);$0"
+    ]
+  },
+  "scanf str": {
+    "prefix": "sfs",
+    "body": [
+      "scanf(\"%s\", $1);$0"
+    ]
+  },
+  "scanf int": {
+    "prefix": "sfd",
+    "body": [
+      "scanf(\"%d\", &$1);$0"
+    ]
+  },
+  "scanf float": {
+    "prefix": "sff",
+    "body": [
+      "scanf(\"%f\", &$1);$0"
     ]
   },
   "for": {
@@ -127,6 +182,12 @@
       "$1 $2($3) {",
       "    $0",
       "}"
+    ]
+  },
+  "format specifier": {
+    "prefix": "fmspf",
+    "body": [
+      "/*%-25.10s*\\n\\t*/"
     ]
   }
   }

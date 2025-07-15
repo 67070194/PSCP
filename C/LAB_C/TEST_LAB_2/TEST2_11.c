@@ -1,4 +1,3 @@
-//Lab 02-11 Number
 #include <stdio.h>
 
 int main() {
